@@ -9,7 +9,7 @@ public class Q3_a {
 		int c=1;
 		Scanner in=new Scanner(System.in);
 		while(c==1) {
-			System.out .print("ENTER NAME AND AGE:");
+			System.out.print("ENTER NAME AND AGE:");
 			String name=in.next();
 			int age=in.nextInt();
 			try {

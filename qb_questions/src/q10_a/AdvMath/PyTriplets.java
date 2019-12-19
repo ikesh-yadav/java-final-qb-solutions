@@ -7,10 +7,10 @@ public class PyTriplets {
 		for(int j=1;j<100;j++) {
 			for(int k=j;k<100;k++) {
 				for(int l=k;l<100;l++) {
-					if(i>n) { System.exit(0);}
 					if ((l*l)==((k*k)+(j*j))) {
 						System.out.println("("+j+","+k+","+l+")");
 						i++;
+						if(i>n) { return;}
 					}
 				}
 			}

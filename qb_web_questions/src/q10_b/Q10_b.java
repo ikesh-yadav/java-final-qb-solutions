@@ -28,14 +28,16 @@ public class Q10_b extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Cookie[] c_list=request.getCookies();
-		String old_pan_value=null;
+		String old_pan_value="";
 		PrintWriter pw=response.getWriter();
-		for(int i=0;i<c_list.length;i++) {
-			if(c_list[i].getName().equals("Pan_ID")) {
-				old_pan_value=c_list[i].getValue();
+		if(c_list!=null) {
+			for(int i=0;i<c_list.length;i++) {
+				if(c_list[i].getName().equals("Pan_ID")) {
+					old_pan_value=c_list[i].getValue();
+				}
 			}
 		}
-		if(old_pan_value==null) {
+		if(old_pan_value=="") {
 			pw.println("Welcome");
 			Cookie c=new Cookie("Pan_ID",request.getParameter("Pan_ID"));
 			pw.println("first Pan_ID value:"+request.getParameter("Pan_ID"));

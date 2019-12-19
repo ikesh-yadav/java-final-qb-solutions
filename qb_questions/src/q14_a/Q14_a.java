@@ -15,9 +15,14 @@ public class Q14_a extends Applet implements MouseMotionListener,MouseListener {
 		addMouseMotionListener(this);
 		setSize(400,400);
 	}
+	public void drawRectangle() {
+		Graphics g=getGraphics();
+		g.drawRect(downX, downY, rectX-downX, rectY-downY);
+	}
 	public void paint(Graphics g){
 		g.drawString("Hello", 10, 10);
-		g.drawRect(downX, downY, rectX-downX, rectY-downY);
+		//g.drawRect(downX, downY, rectX-downX, rectY-downY);
+		drawRectangle();
 	}
 	@Override
 	public void mouseDragged(MouseEvent arg0) {

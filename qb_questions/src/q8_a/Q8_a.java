@@ -8,8 +8,8 @@ class common{
 			}
 			System.out.println("produced");
 			meal_ready=1;
-			Thread.sleep(1000);
 			notify();
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

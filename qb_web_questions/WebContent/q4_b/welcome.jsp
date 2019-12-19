@@ -12,7 +12,7 @@
 	String psw=request.getParameter("psw");
 	if (un.equals("admin") && psw.equals("pass")){
 		session.setAttribute("un",un);
-		out.print("Helo, "+session.getAttribute("un"));
+		out.print("Hello, "+session.getAttribute("un"));
 	}else{
 		response.sendRedirect("register.html");
 	}

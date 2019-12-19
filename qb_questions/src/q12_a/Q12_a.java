@@ -7,6 +7,15 @@ class t extends Thread{
 		System.out.println(getName());
 		//yield();
 	}
+	public void Sleep(int millis) {
+		try {
+			System.out.println(getName()+" will go to sleep");
+			super.sleep(millis);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
 public class Q12_a {
 
@@ -23,8 +32,8 @@ public class Q12_a {
 			Thread main=Thread.currentThread();
 			main.setName("NewNameForMain");
 			System.out.println(main.getName());
-			t1.sleep(1000);
-			t2.sleep(1000);
+			t1.Sleep(1000);
+			t2.Sleep(1000);
 			System.out.println(t1.isAlive());
 			System.out.println(t2.isAlive());
 			System.out.println(t3.isAlive());

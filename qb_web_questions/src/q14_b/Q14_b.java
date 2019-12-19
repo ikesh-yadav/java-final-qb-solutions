@@ -13,7 +13,7 @@ public class Q14_b {
 			Statement stmt=con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
 			Scanner in=new Scanner(System.in);
 			ResultSet r;
-			System.out.print("do you want to disply details of students less than 9 cgpa:");
+			System.out.print("do you want to display details of students less than 9 cgpa:");
 			int ch=in.nextInt();
 			if(ch==1) {
 				r=stmt.executeQuery("select * from student where cgpa<9");
